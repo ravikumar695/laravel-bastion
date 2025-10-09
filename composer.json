@@ -1,0 +1,102 @@
+{
+  "name": "juststeveking/laravel-bastion",
+  "description": "Stripe-inspired API authentication with environment isolation, granular scopes, and built-in security.",
+  "keywords": [
+    "laravel",
+    "api",
+    "authentication",
+    "tokens",
+    "security",
+    "stripe",
+    "sanctum",
+    "api-keys"
+  ],
+  "license": "MIT",
+  "type": "library",
+  "readme": "README.md",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Steve McDougall",
+      "email": "steve@juststeveking.com",
+      "homepage": "https://juststeveking.link/"
+    }
+  ],
+  "homepage": "https://github.com/juststeveking/laravel-bastion",
+  "support": {
+    "email": "juststevemcd@gmail.com",
+    "issues": "https://github.com/juststeveking/laravel-bastion/issues",
+    "source": "https://github.com/juststeveking/laravel-bastion"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/juststeveking"
+    }
+  ],
+  "require": {
+    "php": "^8.4"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.21",
+    "orchestra/testbench": "^9.11",
+    "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-strict-rules": "^2.0",
+    "phpunit/phpunit": "^11.5.8",
+    "roave/security-advisories": "dev-latest"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "JustSteveKing\\Bastion\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JustSteveKing\\Bastion\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {},
+    "github-protocols": [
+      "git",
+      "ssh",
+      "https"
+    ],
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "sort-packages": true,
+    "bump-after-update": false
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JustSteveKing\\Bastion\\Providers\\PackageServiceProvider"
+      ],
+      "aliases": {
+        "Bastion": "JustSteveKing\\Bastion\\Facades\\Bastion"
+      }
+    }
+  },
+  "scripts": {
+    "lint": [
+      "./vendor/bin/pint --test"
+    ],
+    "pint": [
+      "./vendor/bin/pint"
+    ],
+    "stan": [
+      "./vendor/bin/phpstan analyse --memory-limit=-1"
+    ],
+    "test": [
+      "./vendor/bin/phpunit --testdox"
+    ]
+  },
+  "scripts-descriptions": {
+    "lint": "Run the Laravel Pint linter in test mode.",
+    "pint": "Run the Laravel Pint linter to format code.",
+    "stan": "Run PHPStan static analysis.",
+    "test": "Run the PHPUnit tests with testdox output."
+  }
+}
