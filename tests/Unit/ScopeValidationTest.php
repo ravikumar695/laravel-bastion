@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace JustSteveKing\Bastion\Tests\Unit;
 
 use JustSteveKing\Bastion\Facades\Bastion;
-use PHPUnit\Framework\Attributes\Test;
 use JustSteveKing\Bastion\Tests\{TestCase, User};
+use PHPUnit\Framework\Attributes\Test;
 
 final class ScopeValidationTest extends TestCase
 {

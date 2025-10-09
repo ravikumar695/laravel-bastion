@@ -165,7 +165,7 @@ class AuthenticateToken
 
         if ($useProblemDetails) {
             $base = config()->string('bastion.errors.base_url');
-            $base = rtrim($base, '/') . '/';
+            $base = mb_rtrim($base, '/') . '/';
 
             $problem = [
                 'type' => $base . $type,

@@ -11,7 +11,7 @@ return new class () extends Migration {
     {
         $tokensTable = config('bastion.tables.tokens', 'bastion_tokens');
 
-        Schema::create('bastion_audit_logs', function (Blueprint $table) use ($tokensTable): void {
+        Schema::create('bastion_audit_logs', function (Blueprint $table): void {
             $table->id();
 
             // Who performed the action
@@ -66,4 +66,3 @@ return new class () extends Migration {
         Schema::dropIfExists('bastion_audit_logs');
     }
 };
-

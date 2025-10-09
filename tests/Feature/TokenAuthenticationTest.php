@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace JustSteveKing\Bastion\Tests\Feature;
 
 use Illuminate\Support\Facades\Route;
-use PHPUnit\Framework\Attributes\Test;
 use JustSteveKing\Bastion\Enums\{TokenEnvironment, TokenType};
 use JustSteveKing\Bastion\Facades\Bastion;
 use JustSteveKing\Bastion\Tests\{TestCase, User};
+use PHPUnit\Framework\Attributes\Test;
 
 class TokenAuthenticationTest extends TestCase
 {

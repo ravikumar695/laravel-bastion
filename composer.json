@@ -38,11 +38,11 @@
     "php": "^8.4"
   },
   "require-dev": {
-    "laravel/pint": "^1.21",
-    "orchestra/testbench": "^9.11",
-    "phpstan/phpstan": "^2.1",
-    "phpstan/phpstan-strict-rules": "^2.0",
-    "phpunit/phpunit": "^11.5.8",
+    "laravel/pint": "^1.25.1",
+    "orchestra/testbench": "^9.15",
+    "phpstan/phpstan": "^2.1.30",
+    "phpstan/phpstan-strict-rules": "^2.0.7",
+    "phpunit/phpunit": "^11.5.42",
     "roave/security-advisories": "dev-latest"
   },
   "minimum-stability": "stable",
