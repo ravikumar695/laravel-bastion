@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="art/laravel-bastion-logo.png" alt="Laravel Bastion Logo" width="200">
+</p>
+
 # Laravel Bastion
 
 <!-- BADGES_START -->
@@ -62,7 +66,7 @@ use JustSteveKing\Bastion\Concerns\HasBastionTokens;
 class User extends Authenticatable
 {
     use HasBastionTokens;
-    
+
     // ...
 }
 ```
@@ -245,19 +249,19 @@ use JustSteveKing\Bastion\Models\WebhookEndpoint;
 
 Route::post('/webhooks/bastion', function (Request $request) {
     $endpoint = WebhookEndpoint::where('secret_prefix', '...')->first();
-    
+
     $signature = $request->header('X-Bastion-Signature');
     $timestamp = $request->header('X-Bastion-Timestamp');
     $payload = $request->getContent();
-    
+
     if (!$endpoint->verifySignature($payload, $signature, (int)$timestamp)) {
         abort(401, 'Invalid signature');
     }
-    
+
     // Process webhook...
     $event = $request->input('event');
     $data = $request->input('data');
-    
+
     return response()->json(['received' => true]);
 });
 ```
@@ -414,32 +418,32 @@ return [
         'audit_logs' => 'bastion_audit_logs',
         'webhooks' => 'bastion_webhook_endpoints',
     ],
-    
+
     // Token expiration (days)
     'token_expiration_days' => null,
-    
+
     // Audit log retention (days)
     'audit_log_retention_days' => 90,
-    
+
     // Rate limits per minute
     'rate_limits' => [
         'test' => 100,
         'live' => 60,
     ],
-    
+
     // Security settings
     'security' => [
         'prevent_test_tokens_in_production' => true,
         'enable_audit_logging' => true,
         'enable_alerting' => true,
     ],
-    
+
     // Error response format
     'errors' => [
         'use_rfc7807' => true, // RFC 7807 Problem Details
         'base_url' => 'https://bastion.laravel.com/errors/', // Base for problem type URLs
     ],
-    
+
     // User model
     'user_model' => App\Models\User::class,
 ];
