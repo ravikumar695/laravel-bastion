@@ -12,6 +12,8 @@ class AuditLog extends Model
 {
     public const UPDATED_AT = null;
 
+    protected $table = 'bastion_audit_logs';
+
     /**
      * @var array<int, string>
      */
